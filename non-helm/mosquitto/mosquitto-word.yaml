@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mosquitto-password
+  labels:
+    app: mosquitto
+data:
+  password.txt: |
+    admin:$7$101$uhF8zFinELxtm0s0$Dot9iYA4c029SS3a7S3CE9BPkGDlyoxZ82lR2XUZdtOSLJebIYkPoNXCmSc8asS9+qjx/qxfGTWqN2H2jlXwIw==
+    ubuntu:$7$101$1DLYekxaSpA8TJ4v$P9KsOWzIqXys++MlDay7l81pqlWv3q17HLIi/qoEqnkNvoqQUPRyOeNSPlVee39XaJU4TnvmMn26o5QWDpPU9A==
