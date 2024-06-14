@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL:  https://github.com/capafanwi/argocd.git
+    repoURL:  https://github.com/capbancroft/cgs-argocd.git
     targetRevision: HEAD
     path: non-helm/mosquitto
   destination:
