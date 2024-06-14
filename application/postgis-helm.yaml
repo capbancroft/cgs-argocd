@@ -15,7 +15,7 @@ spec:
     path: helm/postgres
     # kustomize:
     #   version: v4.5.7
-    repoURL:  https://github.com/capafanwi/argocd.git
+    repoURL:  https://github.com/capbancroft/cgs-argocd.git
     targetRevision: HEAD
   syncPolicy:
     automated:

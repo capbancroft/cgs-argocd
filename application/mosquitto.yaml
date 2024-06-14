@@ -6,11 +6,13 @@ metadata:
 spec:
   project: default
   source:
-    repoURL:  https://github.com/capafanwi/argocd.git
+    repoURL: https://github.com/capbancroft/cgs-argocd.git
     targetRevision: HEAD
     path: non-helm/mosquitto
+    kustomize:
+      namePrefix: mosquitto-
   destination:
-    namespace: argocgs
+    namespace: cgs 
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
