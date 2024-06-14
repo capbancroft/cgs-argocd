@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: eck
+  name: mosquitto
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL:  https://github.com/capbancroft/bda-world-storage.git
+    repoURL:  https://github.com/capafanwi/argocd.git
     targetRevision: HEAD
-    path: kubernetes/base/mosquitto
+    path: non-helm/mosquitto
   destination:
     namespace: argocgs
     server: https://kubernetes.default.svc
