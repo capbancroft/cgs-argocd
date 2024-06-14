@@ -1,0 +1,3 @@
+resources:
+  - world-pipeline.yaml 
+  - efs-cleanup.yaml
