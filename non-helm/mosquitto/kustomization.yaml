@@ -1,3 +1,10 @@
 resources:
-  - xxxxx.yaml 
-  - xxxxx.yaml
+- mosquitto-deployment.yaml
+- mosquitto-config.yaml
+- mosquitto-security.yaml
+- mosquitto-volume.yaml
+- mosquitto-service.yaml
+
+# removed 
+#- mosquitto-dynamic.yaml
+#- mosquitto-ingress.yaml

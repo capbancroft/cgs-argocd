@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mosquitto
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mosquitto
+  template:
+    metadata:
+      labels:
+        app: mosquitto
+    spec:
+      containers:
+      - name: mosquitto
+        image: eclipse-mosquitto:latest
+        ports:
+        - containerPort: 1883
+        - containerPort: 9001
+        volumeMounts:
+        - mountPath: /mosquitto/config/
+          name: config
+        - mountPath: /mosquitto/security/
+          name: security
+#        - mountPath: /mosquitto/dynamic/
+#          name: dynamic
+#        - mountPath: /mosquitto/certs/
+#          name: certs
+        - mountPath: /mosquitto/data/
+          name: data
+      securityContext:
+        runAsNonRoot: true
+        fsGroup: 1
+        runAsGroup: 1000
+        runAsUser: 1000
+        supplementalGroups:
+        - 1
+      volumes:
+      - name: config
+        configMap:
+          name: mosquitto-config
+      - name: security
+        configMap:
+          name: mosquitto-security
+      - name: data
+        persistentVolumeClaim:
+          claimName: mosquitto-data
+#     - name: dynamic
+#        persistentVolumeClaim:
+#          claimName: mosquitto-dynamic
+#     - name: certs
+#       secret:
+#         secretName: mosquitto-certs
