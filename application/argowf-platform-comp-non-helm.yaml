@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sonarqube
+  name: argowf-platform-comp
   namespace: argocd
 spec:
   destination:
-    namespace: sonarqube
+    namespace: cgs
     server: https://kubernetes.default.svc
   project: default
   source:
     helm:
       valueFiles:
       - values.yaml
-    path: helm/sonarqube
+    path: helm/argowf-platform-comp
     # kustomize:
     #   version: v4.5.7
     repoURL:  https://github.com/capbancroft/cgs-argocd.git
