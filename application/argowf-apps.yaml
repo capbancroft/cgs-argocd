@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/capbancroft/cgs-argocd.git
     targetRevision: HEAD
-    path: non-helm/argowf-artifacts/1-script-example
+    path: non-helm/argowf-apps/1-script-example
     kustomize:
       namePrefix: argowf-artifacts-
   destination:
