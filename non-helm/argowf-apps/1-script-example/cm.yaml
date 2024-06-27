@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: install-script
+  namespace: cgs
+data:
+  install.sh: |
+    #!/bin/bash
+    set -eo pipefail
+
+    echo "Updating package list..."
+    apt-get update -y
+
+    echo "Installing Python..."
+    apt-get install -y python3 python3-pip
+
+    echo "Installing AWS CLI..."
+    apt-get install -y curl unzip
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    unzip awscliv2.zip
+    ./aws/install
+
+    echo "Verifying installations..."
+    python3 --version
+    pip3 --version
+    aws --version
