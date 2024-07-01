@@ -1,0 +1,3 @@
+resources:
+  - tiledb-ws-deployment.yaml
+  - tiledb-ws-service.yaml
