@@ -1,4 +1,4 @@
-As part of our work to productionize the photogrammetry systems, we need to provide demonstrate capability to instantiate the systems in a repeatable fashion. These systems should then be maintainable using "Continuous Integration and Continuous Delivery (CICD)" methods and tooling. Consider the following "Business Process Model Notation (BPMN)" diagram of this capability depicting four swim lanes of activity: procurement, development operations, continuous deployment and handoff.
+As part of our work to productionize the photogrammetry systems, we need to demonstrate the capability to instantiate the systems in a repeatable fashion. These systems should then be maintainable using "Continuous Integration and Continuous Delivery (CICD)" methods and tooling. Consider the following "Business Process Model Notation (BPMN)" diagram of this capability depicting four swim lanes of activity: procurement, development operations, continuous deployment and handoff.
 
 ![Cloud Infrastructure](images/cloud-environment.png)
 
